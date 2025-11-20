@@ -1,0 +1,11 @@
+{
+	"name": "adls-gen2",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://stdimentoringdatalakell.dfs.core.windows.net"
+		},
+		"annotations": []
+	}
+}

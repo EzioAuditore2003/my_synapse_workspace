@@ -1,0 +1,36 @@
+{
+	"name": "Dummy_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adls-gen2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"schema_name": {
+				"type": "string"
+			},
+			"table_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@concat(dataset().schema_name, '_', dataset().table_name, '_dummy.csv')",
+					"type": "Expression"
+				},
+				"folderPath": "dummy_sources",
+				"fileSystem": "data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

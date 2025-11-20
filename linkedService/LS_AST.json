@@ -1,0 +1,22 @@
+{
+	"name": "LS_AST",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"type": "AzureTableStorage",
+		"typeProperties": {
+			"sasUri": {
+				"type": "SecureString",
+				"value": "**********"
+			},
+			"sasToken": {
+				"secretName": "data-lake-sas",
+				"store": {
+					"referenceName": "LS_AKV",
+					"type": "LinkedServiceReference"
+				},
+				"type": "AzureKeyVaultSecret"
+			}
+		},
+		"annotations": []
+	}
+}

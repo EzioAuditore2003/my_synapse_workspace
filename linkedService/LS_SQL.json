@@ -1,0 +1,22 @@
+{
+	"name": "LS_SQL",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"connectVia": {
+			"referenceName": "my-integration-runtime",
+			"type": "IntegrationRuntimeReference"
+		},
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": {
+				"secretName": "sql-connection-string",
+				"store": {
+					"referenceName": "LS_AKV",
+					"type": "LinkedServiceReference"
+				},
+				"type": "AzureKeyVaultSecret"
+			}
+		},
+		"annotations": []
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"name": "LS_AKV",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://kv-di-mentoring-ll.vault.azure.net/"
+		},
+		"annotations": []
+	}
+}
